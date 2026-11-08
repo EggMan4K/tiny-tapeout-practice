@@ -1,20 +1,24 @@
-<!---
+# How it works
 
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
+This project implements a simple two-input AND gate using Verilog. It takes two digital inputs, A and B, and produces one output.
 
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+The output is HIGH (1) only when both inputs are HIGH (1). Otherwise, the output is LOW (0).
 
-## How it works
+The inputs are connected to `ui_in[0]` and `ui_in[1]`, and the result is sent to `uo_out[0]`. The remaining output pins are set to zero.
 
-Explain how your project works
+# How to test
 
-## How to test
+To test the AND gate, apply the following input combinations:
 
-Explain how to use your project
+| Input A | Input B | Expected Output |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
 
-## External hardware
+The circuit is working correctly if the output is 1 only when both inputs are 1.
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+# External hardware
+
+No external hardware is required for simulation. The circuit can be tested using the Tiny Tapeout simulation environment.
